@@ -1,0 +1,225 @@
+\documentclass[12pt]{report} % format du document
+\usepackage[utf8]{inputenc} % type d'encodage utf8 unix, le plus worlwide
+\usepackage[round]{natbib} % package de format biblio
+\usepackage[T1]{fontenc} % police d'encodage, OT1 moins de caractère que T1 (qui contient les caractères spéciaux)
+\usepackage[english,francais]{babel} % package de langue
+\usepackage{amsmath} % pour écrire les formules maths et améliorer la sortie
+\usepackage{amssymb} % symboles additionnels pour amsmath
+\usepackage{mathrsfs} % des symboles additionnels de physique (entre autre)
+\usepackage[pdftex]{graphicx} % package pour les graphiques, version avancée
+\usepackage[hmargin=2.5cm, vmargin=2cm, headheight=15.5pt]{geometry} % marges
+\usepackage{setspace} % interlignes
+\usepackage{fancyhdr} % customisation des hauts et bas de page
+\usepackage[svgnames, table]{xcolor} % contrôle des couleurs avancé
+\usepackage{listings} % pour du code, certains langages prédéfini, sortie simple
+\usepackage{lastpage} % pour récupérer la dernière page
+\usepackage{times} % police d'écriture
+\usepackage{titlesec} % formatage des titres
+\usepackage{framed}
+%\overfullrule=2cm
+\usepackage{eurosym}
+\usepackage{setspace}
+\usepackage[font=footnotesize]{caption}
+\usepackage{multicol}
+\usepackage{pdflscape}
+\usepackage[unicode=true, pdfpagelabels]{hyperref} % pour les liens et customisation de ceux-ci
+\usepackage{float}
+\usepackage[font=footnotesize]{subcaption}
+\usepackage[toc,page]{appendix}
+
+\newfloat{Matrice}{h}{mat}
+
+\DeclareUnicodeCharacter{20AC}{\euro}
+
+\titlespacing{\paragraph}{0em}{1em}{1em} % pas de tabulation pour subsubsection, 1.5em espace au dessus, 0.5em en dessous
+
+%--------------- Configuration couleurs & auteur du pdf ----------------------------------
+\hypersetup{breaklinks=true,
+            pdfauthor={Bastien Delseny\\
+            Runghen Rogini},
+            pdftitle={StatEasy},
+            colorlinks=true,
+            citecolor=DarkGreen,
+            urlcolor=blue,
+            linkcolor=DarkRed,
+            pdfborder={0 0 0}}
+%------------------------------------------------------------------------------------------
+
+
+\urlstyle{same}  % don't use monospace font for urls
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} %Hrule fait des lignes horizontales de 0.5mm d'épaisseur
+
+%------------------ On met une ligne en haut et bas de page -----------------------------
+\renewcommand{\headrulewidth}{0.1pt}
+%\renewcommand{\footrulewidth}{0.1pt}
+%----------------------------------------------------------------------------------------
+
+%----- On crée une commande pour faire des saut de paragraphe réglables 0em par défault ----------
+\newcommand{\PAR}[1][0em]{\setlength{\parskip}{#1}\par}
+%----------------------------------------------------------------------------------------
+
+%------ Configuration des chapitres -----------------------------------------------------
+\titleformat{\chapter}{\normalfont\Large\bfseries}{Chapitre \ \thechapter \space\space\space}{0ex}{} %titre et numéro chapitre sur la même ligne
+\titlespacing{\chapter}{0em}{2em}{1em} % Espaces avant et après le chapitre (vertical)
+%----------------------------------------------------------------------------------------
+\makeatletter
+\renewcommand\chapter{%\if@openright\cleardoublepage\else\clearpage\fi
+
+	\thispagestyle{fancy}
+		\lhead{}
+		\chead{\leftmark}
+		\rhead{}
+		\lfoot{}
+		\cfoot{}
+		\rfoot{\thepage/\pageref*{ArabePage}}
+                   \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother
+%----------------------------------------------------------------------------------------
+
+\setcounter{tocdepth}{4} % Niveau de titres dans la table des matières
+
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
+%-----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------------------
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------------------------------------------------------------------------%
+%				DOCUMENT														 %
+%--------------------------------------------------------------------------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%--------------------------------------------------------------------------------
+%			Page de garde						
+%--------------------------------------------------------------------------------
+\pagestyle{empty}
+
+\title{StatEasy}
+\author{Delseny Bastien\\
+   Runghen Rogini}
+\date{\today}
+
+\maketitle
+
+\clearpage
+
+%--------------------------------------------------------------------------------
+%			Table des matières					
+%--------------------------------------------------------------------------------
+\clearpage
+\normalsize
+\renewcommand{\contentsname}{Table des matières}
+\tableofcontents
+%\renewcommand{\listfigurename}{Images et figures}
+%\listoffigures
+
+
+%--------------------------------------------------------------------------------
+%				RAPPORT						
+%--------------------------------------------------------------------------------
+\clearpage
+
+	\pagestyle{fancy}
+		\lhead{}
+		\chead{\leftmark}
+		\rhead{}
+		\lfoot{}
+		\cfoot{}
+		\rfoot{\thepage/\pageref*{ArabePage}}
+
+
+%--------------------------------------------------------------------------------
+%			TEXTE DU RAPPORT					Banane
+%--------------------------------------------------------------------------------
+\setcounter{page}{1}
+\setstretch{1.5}
+\chapter{What is \emph{StatEasy} ?}
+
+\emph{StatEasy} is a project which is meant to help easing statistical 
+analysis for different users(varying from beginners to advanced users). 
+We decided to divide this project into three sub-projects. 
+It can actually be regarded as different aspects of our main goal 
+- i.e. making the most of an open source tool for statistical analysis 
+using a user-friendly interface. We talk about 'sub-projects' as being
+various aspects of our project which will enable us to building up \emph{StatEasy}.
+
+\\
+
+\emph{StatEasy} aims to provide a user-friendly interface for R statistical analysis. 
+Our main objectives are the following:
+\begin{itemize}
+\item Designing a user-friendly interface
+\item Creating a database which will contain all available packages and related 
+functions on R with respect to the different statistical analyses to be performed
+\item Compiling links and tutorials on statistical analysis and R in general 
+which are freely available. In addition to that, other documentation will be 
+supplemented whereby information is currently lacking online. 
+(All this will be in the format of a documentation available offline?)
+\end{itemize}
+
+\chapter{Why this tool ? - The purpose of our project}
+
+Compared to available user-friendly environments such as Statisca or SPSS (and many others), 
+we are suggesting using the open source tool - R statistical program (or software??). 
+Even if R is becoming increasingly popular, a lot of people are still scared of it due to 
+its unintuitive appearance. 
+Like mentioned in an article in 2009 by Petchey and colleagues,
+R is an advantageous tool which provides various analysis within only one program. 
+However using R requires some training to getting used to the new work environment. 
+\emph{StatEasy} can be viewed as a facilitator which enable different user types to 
+get rid of their phobia of using R or their phobia of statistical analyses. 
+
+For beginners who are not familiar to statistical analysis - we will be providing 
+them some guidance to help them to choose the most appropriate analysis with respect 
+to their objective. Currently, there are more than 10 000 packages available. 
+Chances are high that the analysis that you are currently performing has been 
+bundled in a nice package with all the required functions. 
+Thus, to the more advanced users, \emph{StatEasy} will be 
+used more like a search engine for the available packages they might be interested
+to use wrt their analyses. 
+
+We want to provide a tool which will need less time to be handled than R with 
+R performances. Moreover \emph{StatEasy} also means less time learning statistical 
+analysis, more time performing those.
+
+\chapter{How to make all this possible ?}
+As mentioned previously, we will be using R for our current project. 
+We can perform statistical analysis, plus it is a useful tool 
+for the management of spreadsheets and graphics. 
+Being an open-source is of course an advantage.\\
+
+To be able to carry out the different objectives of our project, 
+we have separated the different objectives as distinct sub-projects. 
+In our first phase, i.e. our current phase, of our project we are 
+focusing on identifying the different type of users, the different 
+kind of problems that are frequently encountered either from an R 
+point of view or from a statistical point of view. For starters, we 
+focused on the main questions that might help someone to identify the
+statistical analysis they might be carrying out. 
+
+
+
+%--------------------------------------------------------------------------------
+%				BIBLIOGRAPHIE					
+%--------------------------------------------------------------------------------
+%\normalsize
+%\phantomsection
+%\setstretch{1}
+%\addcontentsline{toc}{chapter}{R\'ef\'erences bibliographiques}
+%\bibliographystyle{plainnat}
+%\bibliography{biblio}
+%\nocite{*}
+\label{ArabePage}
+\clearpage
+
+
+\end{document}
+%test

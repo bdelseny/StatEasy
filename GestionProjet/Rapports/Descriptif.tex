@@ -1,0 +1,191 @@
+\documentclass[12pt]{report} % format du document
+\usepackage[utf8]{inputenc} % type d'encodage utf8 unix, le plus worlwide
+\usepackage[round]{natbib} % package de format biblio
+\usepackage[T1]{fontenc} % police d'encodage, OT1 moins de caractère que T1 (qui contient les caractères spéciaux)
+\usepackage[english,francais]{babel} % package de langue
+\usepackage{amsmath} % pour écrire les formules maths et améliorer la sortie
+\usepackage{amssymb} % symboles additionnels pour amsmath
+\usepackage{mathrsfs} % des symboles additionnels de physique (entre autre)
+\usepackage[pdftex]{graphicx} % package pour les graphiques, version avancée
+\usepackage[hmargin=2.5cm, vmargin=2cm, headheight=15.5pt]{geometry} % marges
+\usepackage{setspace} % interlignes
+\usepackage{fancyhdr} % customisation des hauts et bas de page
+\usepackage[svgnames, table]{xcolor} % contrôle des couleurs avancé
+\usepackage{listings} % pour du code, certains langages prédéfini, sortie simple
+\usepackage{lastpage} % pour récupérer la dernière page
+\usepackage{times} % police d'écriture
+\usepackage{titlesec} % formatage des titres
+\usepackage{framed}
+%\overfullrule=2cm
+\usepackage{eurosym}
+\usepackage{setspace}
+\usepackage[font=footnotesize]{caption}
+\usepackage{multicol}
+\usepackage{pdflscape}
+\usepackage[unicode=true, pdfpagelabels]{hyperref} % pour les liens et customisation de ceux-ci
+\usepackage{float}
+\usepackage[font=footnotesize]{subcaption}
+\usepackage[toc,page]{appendix}
+
+\newfloat{Matrice}{h}{mat}
+
+\DeclareUnicodeCharacter{20AC}{\euro}
+
+\titlespacing{\paragraph}{0em}{1em}{1em} % pas de tabulation pour subsubsection, 1.5em espace au dessus, 0.5em en dessous
+
+%--------------- Configuration couleurs & auteur du pdf ----------------------------------
+\hypersetup{breaklinks=true,
+            pdfauthor={Bastien Delseny\\
+            Runghen Rogini},
+            pdftitle={StatEasy},
+            colorlinks=true,
+            citecolor=DarkGreen,
+            urlcolor=blue,
+            linkcolor=DarkRed,
+            pdfborder={0 0 0}}
+%------------------------------------------------------------------------------------------
+
+
+\urlstyle{same}  % don't use monospace font for urls
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} %Hrule fait des lignes horizontales de 0.5mm d'épaisseur
+
+%------------------ On met une ligne en haut et bas de page -----------------------------
+\renewcommand{\headrulewidth}{0.1pt}
+%\renewcommand{\footrulewidth}{0.1pt}
+%----------------------------------------------------------------------------------------
+
+%----- On crée une commande pour faire des saut de paragraphe réglables 0em par défault ----------
+\newcommand{\PAR}[1][0em]{\setlength{\parskip}{#1}\par}
+%----------------------------------------------------------------------------------------
+
+%------ Configuration des chapitres -----------------------------------------------------
+\titleformat{\chapter}{\normalfont\Large\bfseries}{Chapitre \ \thechapter \space\space\space}{0ex}{} %titre et numéro chapitre sur la même ligne
+\titlespacing{\chapter}{0em}{2em}{1em} % Espaces avant et après le chapitre (vertical)
+%----------------------------------------------------------------------------------------
+\makeatletter
+\renewcommand\chapter{%\if@openright\cleardoublepage\else\clearpage\fi
+
+	\thispagestyle{fancy}
+		\lhead{}
+		\chead{\leftmark}
+		\rhead{}
+		\lfoot{}
+		\cfoot{}
+		\rfoot{\thepage/\pageref*{ArabePage}}
+                   \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother
+%----------------------------------------------------------------------------------------
+
+\setcounter{tocdepth}{4} % Niveau de titres dans la table des matières
+
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
+%-----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------------------
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------------------------------------------------------------------------%
+%				DOCUMENT														 %
+%--------------------------------------------------------------------------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%--------------------------------------------------------------------------------
+%			Page de garde						
+%--------------------------------------------------------------------------------
+\pagestyle{empty}
+
+\title{StatEasy}
+\author{Delseny Bastien\\
+   Runghen Rogini}
+\date{\today}
+
+\maketitle
+
+\clearpage
+
+%--------------------------------------------------------------------------------
+%			Table des matières					
+%--------------------------------------------------------------------------------
+\clearpage
+\normalsize
+\renewcommand{\contentsname}{Table des matières}
+\tableofcontents
+%\renewcommand{\listfigurename}{Images et figures}
+%\listoffigures
+
+
+%--------------------------------------------------------------------------------
+%				RAPPORT						
+%--------------------------------------------------------------------------------
+\clearpage
+
+	\pagestyle{fancy}
+		\lhead{}
+		\chead{\leftmark}
+		\rhead{}
+		\lfoot{}
+		\cfoot{}
+		\rfoot{\thepage/\pageref*{ArabePage}}
+
+
+%--------------------------------------------------------------------------------
+%			TEXTE DU RAPPORT					
+%--------------------------------------------------------------------------------
+\setcounter{page}{1}
+\setstretch{1.5}
+\chapter{What is \emph{StatEasy} ?}
+\emph{StatEasy} is a project which is meant to help performing statistical analysis.
+In the actual state \emph{StatEasy} our goal is to divide this project into three sub-projects.
+The first sub-project is also its main goal. 
+\emph{StatEasy} will be developed to provide a friendly-user interface for R statistical analysis.
+The second sub-project of \emph{StatEasy} is providing an easy to use database of all packages and functions existing on R.
+This database is meant to be accessible via the interface and to provide a powerfull and usefull search engine among the large amount of functions existing on R.
+The third but not least part of \emph{StatEasy} project is developing a powerfull documentation for statistical analysis and R use.
+This documentation is meant to provide help and documentation on a large amount of statistical analysis to all people who will need.
+This documentation will regroup links and resources for statistical analysis and R tutorial.
+It will also focus on providing tutorials where there are lacks in R and statistical community.
+
+\chapter{Why this tool ?}
+This tool is meant to help people performing good statistical analysis.
+While R exist to perform good statistical analysis in a technical term \emph{StatEasy} is a tool which means to choose the right analysis.
+Studies are taking more and more times as researches.
+We want to provide a tool which will need less time to be handled than R with R performances.
+Moreover \emph{StatEasy} also means less time learning statistical analysis, more time performing those.
+
+\chapter{How to make all this possible ?}
+It already exist a powerfull tool for performing statistical analysis which provide useful tools for spreadsheet management and graphics.
+This tool is R and is open-source.
+But R is difficult to handle and it can be difficult to find the tool you need on it.
+\emph{StatEasy} will be an interface meaning to be user-friendly but as powerfull as R.
+One way to do so is to develop this interface for R.
+By doing so we will be able to provide a powerfull tool in technical terms with all its advantages and more.
+\emph{StatEasy} is also meant to be handled at different scales, from statistical expert with competences of R programmations to new to statistics and programmation.
+We are now targeting three different scales of use.
+The first one is providing a powerfull and easy to handle database of R packages and functions for statistical experts who wants to find the tool they need in a fast and easy way.
+The second one is having an interactive tool that helps people choosing the right statistical analysis and how to perform it.
+The last one is providing an automatical analysis of data.
+
+%--------------------------------------------------------------------------------
+%				BIBLIOGRAPHIE					
+%--------------------------------------------------------------------------------
+%\normalsize
+%\phantomsection
+%\setstretch{1}
+%\addcontentsline{toc}{chapter}{R\'ef\'erences bibliographiques}
+%\bibliographystyle{plainnat}
+%\bibliography{biblio}
+%\nocite{*}
+\label{ArabePage}
+\clearpage
+
+
+\end{document}
+%test
