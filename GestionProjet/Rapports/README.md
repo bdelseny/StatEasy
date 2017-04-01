@@ -6,7 +6,7 @@ Ce dossier contient les rapports techniques sur StatEasy.
 
 ---------------------------------------------------------
 
-## Meeting 1 Avril 2017
+## Meeting 1 April 2017
 
 ### Tools
 
@@ -18,4 +18,15 @@ Ce dossier contient les rapports techniques sur StatEasy.
 - Github
   - Issues, projects, labels, milestones ...
 
-###
+### Scenarii
+
+- TODO a glossary
+- Who will use StatEasy ?
+  - What do the user want to do ?
+
+### First work of conception
+
+- Choose 1 user to begin the conception & implementation
+  - Scenario 2 "Jean-Paul"
+- TODO README for tools like above
+- Laguage : C++, R, Linux
