@@ -38,7 +38,6 @@ comme la programmation procédurale, la programmation orientée objet et la prog
 **Jeu de données** :
 voir 
 
-
 **Language R** :
 
 
