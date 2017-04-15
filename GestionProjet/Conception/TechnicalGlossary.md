@@ -2,6 +2,7 @@
 
 **Analyse** :
 
+**Analyse de données** :
 
 **Analyse Statistique** :
 Procédé par lequel on extrait un certain nombre d'informations à partir d'un ensemble de données.
