@@ -28,8 +28,8 @@ For the redaction of "quick" reports or README files in StatEasy repository we u
 #### LaTeX
 For the redaction of "heavy", complexe, reports we use [LaTeX](https://www.latex-project.org/about/)
 
-- It permit to do high quality reports.
-- *We may use tools as Sharelatex if we need to do collaborative work on reports redaction [more about Sharelatex](https://www.sharelatex.com/)*
+- It allows to do high quality reports.
+- *We may use tools as Sharelatex if we need to do collaborative work on reports writing up [more about Sharelatex](https://www.sharelatex.com/)*
 
 ## Converter
 
@@ -40,14 +40,14 @@ It comes with TeX/LaTeX distributions like [TeX Live](https://www.tug.org/texliv
 
 ### Pandoc
 
-Pandoc a universal document converter.
+Pandoc is a universal document converter.
 It can easily convert markdown to HTML or LaTeX or PDF (using pdflatex) [more informations here](http://pandoc.org/).
 
-## Versioning and project management
+## Version Control and project management
 
 ### Git
 
-For the versioning we use [Git](https://git-scm.com/).
+For the version controls we use [Git](https://git-scm.com/).
 
 ### Github
 
