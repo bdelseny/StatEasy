@@ -1,15 +1,15 @@
-# Glossaire
+# Glossaire / Glossary
 
 **Analyse** :
 
-**Analyse de données** :
+**Analyse de données** / **Data Analysis**:
 
-**Analyse Statistique** :
+**Analyse Statistique** / **Statistical Analysis**:
 Procédé par lequel on extrait un certain nombre d'informations à partir d'un ensemble de données.
 Généralement cela consiste à appliquer des fonctions particulières sur les données et à étudier
 les résultat obtenus.
 
-**Base de données** :
+**Base de données** / **Database**:
 
 
 **C++** :
@@ -17,26 +17,26 @@ Le C++ est un langage de programmation compilé, permettant la programmation sou
 comme la programmation procédurale, la programmation orientée objet et la programmation générique.
 ([source](https://fr.wikipedia.org/wiki/C%2B%2B))
 
-**Critère** :
+**Critère** / **Criteria** :
 
 
-**Données** :
+**Données** / **Data**:
 
 
 **Ensemble de données** :
 
 
 
-**Fonction** :
+**Fonction** / **Function** :
 
 
 **Format** :
 
 
-**Importer** :
+**Importer** / **Import**:
 
 
-**Jeu de données** :
+**Jeu de données** / **Data set**:
 voir 
 
 **Language R** :
@@ -57,7 +57,7 @@ voir
 **Rapport** :
 
 
-**Sortie** :
+**Sortie** / **Output**:
 
 
 **Spécification** :
