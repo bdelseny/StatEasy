@@ -107,9 +107,6 @@ kinds of organizations, both public and private.
 
 
 **Statistical Analysis** :  
-Procédé par lequel on extrait un certain nombre d'informations à partir d'un ensemble de données.
-Généralement cela consiste à appliquer des fonctions particulières sur les données et à étudier
-les résultat obtenus.  
 See [Statistics](#Statistics).
 
 **Statistics** :  
