@@ -1,7 +1,7 @@
-# Spécification des diagrammes
+# Diagrams Specifications
 
-## Diagramme de contexte
+## Context Diagram
 
-## Cas d’utilisation Interface version 0.1
+## Use Case : Interface (version 0.1)
 
-## Cas d’utilisation BD version 0.1
+## Use Case : Database (version 0.1)
