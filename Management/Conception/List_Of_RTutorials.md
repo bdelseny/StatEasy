@@ -1,6 +1,6 @@
-##This file contains a bunch of links to useful resources and tutorials for R:
+## This file contains a bunch of links to useful resources and tutorials for R:
 
-#Online Resources:
+# Online Resources:
 
 - R for cats: https://rforcats.net/ 
 Summary: It is an introduction for beginners to R (targetted to people having no prior programming experience)
@@ -26,7 +26,7 @@ Summary: For simple queries and updates about some R-packages, forum for R users
 Summary: Gives information about the functions requested(just like the help available on R/ RStudio), related R-packages, 
 application of functions using examples and getting started with R
 
-#Books available:
+# Books available:
 For people transitioning from other statistical programs such as SPSS, SAS, stata:
 review on r4stats.com for further information
 
