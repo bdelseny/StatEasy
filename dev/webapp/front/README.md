@@ -6,10 +6,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Needed tools
 
-- npm : a package manager needed for yarn and angular-cli to run
-- yarn : for installing modules needed and to launch front server
+- [npm](https://www.npmjs.com/get-npm) : a package manager needed for yarn and angular-cli to run
+- [yarn](https://yarnpkg.com/lang/en/docs/install/) : for installing modules needed and to launch front server
 - [Angular CLI](https://github.com/angular/angular-cli) : for starting front server
-- Visual Studio Code : for developing code. It is the best editor for developing in TypeScript. It needs some plugin installed to be even more usefull. (recommended plugins : [TSlint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint))
+- [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) : for developing code. It is the best editor for developing in TypeScript. It needs some plugin installed to be even more usefull. (recommended plugins : [TSlint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint))
 
 ## Development server
 
