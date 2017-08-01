@@ -14,6 +14,9 @@ It was designed with a bias toward system programming and embedded, resource-con
 and large systems, with performance, efficiency and flexibility of use as its design highlights.
 ([source](https://en.wikipedia.org/wiki/C%2B%2B))
 
+**CRAN** :  
+CRAN stands for Comprehensive R Archive Network.
+
 **Criteria** :  
 
 
@@ -58,6 +61,9 @@ proprietary or free and may be either unpublished or open. ([source](https://en.
 
 **Input** :  
 
+
+**MRAN** :  
+MRAN stands for Microsoft R Application Network.
 
 **Ordered** :  
 
