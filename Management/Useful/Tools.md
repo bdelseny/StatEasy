@@ -23,3 +23,11 @@ For complex reporting.
 
 ## Pandoc
 Pandoc a universal document converter : http://pandoc.org/
+
+## NoMachine
+
+For sharing desktop or distant desktop monitoring. https://www.nomachine.com/getting-started-with-nomachine
+
+## appear.in
+
+For video conferences. https://appear.in/
