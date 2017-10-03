@@ -4,6 +4,7 @@
 
 For versionning and sharing source code.
 But also for organisation with: Issues, projects, labels, milestones ...
+
 ## Discord
 
 For communication, by vocal and text messages.
@@ -31,3 +32,7 @@ For sharing desktop or distant desktop monitoring. https://www.nomachine.com/get
 ## appear.in
 
 For video conferences. https://appear.in/
+
+## ShowMore
+
+Screen record. https://showmore.com/fr/
